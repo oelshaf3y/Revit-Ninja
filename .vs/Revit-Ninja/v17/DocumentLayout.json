@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Omar.Elshafey\\source\\repos\\oelshaf3y\\Revit-Ninja\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EDB91509-2306-49F2-A708-1F9F1961FD21}|Revit-Ninja.csproj|c:\\users\\omar.elshafey\\source\\repos\\oelshaf3y\\revit-ninja\\alignment\\alignhorizontally.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDB91509-2306-49F2-A708-1F9F1961FD21}|Revit-Ninja.csproj|solutionrelative:alignment\\alignhorizontally.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDB91509-2306-49F2-A708-1F9F1961FD21}|Revit-Ninja.csproj|c:\\users\\omar.elshafey\\source\\repos\\oelshaf3y\\revit-ninja\\alignment\\alignvertically.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDB91509-2306-49F2-A708-1F9F1961FD21}|Revit-Ninja.csproj|solutionrelative:alignment\\alignvertically.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EDB91509-2306-49F2-A708-1F9F1961FD21}|Revit-Ninja.csproj|c:\\users\\omar.elshafey\\source\\repos\\oelshaf3y\\revit-ninja\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{EDB91509-2306-49F2-A708-1F9F1961FD21}|Revit-Ninja.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
@@ -39,12 +47,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AlignHorizontally.cs",
+              "DocumentMoniker": "C:\\Users\\Omar.Elshafey\\source\\repos\\oelshaf3y\\Revit-Ninja\\Alignment\\AlignHorizontally.cs",
+              "RelativeDocumentMoniker": "Alignment\\AlignHorizontally.cs",
+              "ToolTip": "C:\\Users\\Omar.Elshafey\\source\\repos\\oelshaf3y\\Revit-Ninja\\Alignment\\AlignHorizontally.cs",
+              "RelativeToolTip": "Alignment\\AlignHorizontally.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAwC8AAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T09:27:09.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AlignVertically.cs",
+              "DocumentMoniker": "C:\\Users\\Omar.Elshafey\\source\\repos\\oelshaf3y\\Revit-Ninja\\Alignment\\AlignVertically.cs",
+              "RelativeDocumentMoniker": "Alignment\\AlignVertically.cs",
+              "ToolTip": "C:\\Users\\Omar.Elshafey\\source\\repos\\oelshaf3y\\Revit-Ninja\\Alignment\\AlignVertically.cs",
+              "RelativeToolTip": "Alignment\\AlignVertically.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T08:22:39.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\Omar.Elshafey\\source\\repos\\oelshaf3y\\Revit-Ninja\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
               "ToolTip": "C:\\Users\\Omar.Elshafey\\source\\repos\\oelshaf3y\\Revit-Ninja\\.gitignore",
               "RelativeToolTip": ".gitignore",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-09-29T08:08:20.992Z",
               "EditorCaption": ""
