@@ -1,0 +1,17 @@
+﻿<RevitAddIn>
+	<AddIn Type="Application">
+		<Name>Revit-Ninja</Name>
+		<Publisher>Omar O.El-Shafey</Publisher>
+		<Assembly>Revit-Ninja.dll</Assembly>
+		<AddInId>E403131F-0E45-42AB-B99E-560A4B5EB690</AddInId>
+		<FullClassName>Revit_Ninja.App</FullClassName>
+		<Text>O.elshaf3y|2024</Text>
+		<VendorId>Omar El-Shafey|01147985807</VendorId>
+		<VendorDescription>
+			Omar El-Shafey
+			01147985807
+			o.elshaf3y@gmail.com
+		</VendorDescription>
+		<VisabilityMode>AlwaysVisible</VisabilityMode>
+	</AddIn>
+</RevitAddIn>
