@@ -25,3 +25,11 @@ C:\Users\oelsh\source\repos\oelshaf3y\Revit-Ninja\obj\x64\Debug\Revit-Ninja.cspr
 C:\Users\oelsh\source\repos\oelshaf3y\Revit-Ninja\obj\x64\Debug\Revit-Ni.29A0B10F.Up2Date
 C:\Users\oelsh\source\repos\oelshaf3y\Revit-Ninja\obj\x64\Debug\Revit-Ninja.dll
 C:\Users\oelsh\source\repos\oelshaf3y\Revit-Ninja\obj\x64\Debug\Revit-Ninja.pdb
+C:\Users\Omar.Elshafey\source\repos\oelshaf3y\Revit-Ninja\bin\x64\Debug\Revit-Ninja.dll.config
+C:\Users\Omar.Elshafey\source\repos\oelshaf3y\Revit-Ninja\bin\x64\Debug\Revit-Ninja.dll
+C:\Users\Omar.Elshafey\source\repos\oelshaf3y\Revit-Ninja\bin\x64\Debug\Revit-Ninja.pdb
+C:\Users\Omar.Elshafey\source\repos\oelshaf3y\Revit-Ninja\obj\x64\Debug\Revit-Ninja.csproj.AssemblyReference.cache
+C:\Users\Omar.Elshafey\source\repos\oelshaf3y\Revit-Ninja\obj\x64\Debug\Revit-Ninja.csproj.ResolveComReference.cache
+C:\Users\Omar.Elshafey\source\repos\oelshaf3y\Revit-Ninja\obj\x64\Debug\Revit-Ninja.csproj.CoreCompileInputs.cache
+C:\Users\Omar.Elshafey\source\repos\oelshaf3y\Revit-Ninja\obj\x64\Debug\Revit-Ninja.dll
+C:\Users\Omar.Elshafey\source\repos\oelshaf3y\Revit-Ninja\obj\x64\Debug\Revit-Ninja.pdb

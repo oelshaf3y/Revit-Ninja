@@ -98,7 +98,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App.cs" />
     <Compile Include="Ninja.cs" />
     <Compile Include="ParamFromExcel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -162,78 +161,6 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\capture.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\captures.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hideUnhosted.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hideUnhosted2.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hideUnhostedS.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\HostL.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\HostS.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\NOS.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\NOSsmall.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pdfLarge.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pdfSmall.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rebl.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rebs.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\resetSheets.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ResetSheetsS.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ResetView.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\resetViewS.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\restore.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rft.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\selectbyl.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\selectbys.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sheets.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
