@@ -30,8 +30,26 @@ namespace Revit_Ninja.Views
             Parameter state = activeView.LookupParameter("View State");
             if (state == null)
             {
-                doc.print("Please Create a new Project Parameter (Instance Parameter) for views\nParameter Name: View State\nType: Text");
-                return Result.Failed;
+                if (!
+                    Ninja.assignParameter(
+                        commandData,
+                        "Ninja-Views",
+                        "View State",
+                        BuiltInCategory.OST_Views,
+                        SpecTypeId.String.Text)
+                    )
+                {
+                    doc.print("Please Create a new Project Parameter (Instance Parameter) for views\nParameter Name: View State\nType: Text");
+                    return Result.Failed;
+                }
+                else
+                {
+                    state = activeView.LookupParameter("View State");
+                    if (state == null)
+                    {
+                        doc.print("Please Create a new Project Parameter (Instance Parameter) for views\nParameter Name: View State\nType: Text");
+                    }
+                }
             }
             if (state.IsReadOnly)
             {

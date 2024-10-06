@@ -3,6 +3,7 @@ using Autodesk.Revit.UI;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Forms;
@@ -14,11 +15,12 @@ namespace Revit_Ninja
     public static class Ninja
     {
         public static double meterToFeet(this double distance) => distance / 0.3048;
-        public static double mmToFeet(this double Distance) => Distance / 304.8;
-        public static double feetToMeter(this double Distance) => Distance * 0.3048;
-        public static double feetToMM(this double Distance) => Distance * 304.8;
+        public static double mmToFeet(this double distance) => distance / 304.8;
+        public static double feetToMeter(this double distance) => distance * 0.3048;
+        public static double feetToMM(this double distance) => distance * 304.8;
         public static double toDegree(this double angle) => angle * 180 / Math.PI;
         public static double toRad(this double angle) => angle * Math.PI / 180;
+
         //public static string ToString(this XYZ point) => $"{point.X},{point.Y},{point.Z}";
         public static XYZ getCG(this Element element) => element.Location is LocationPoint ? getPointLocation(element) : getLineLocation(element);
         public static XYZ getPointLocation(Element element) => ((LocationPoint)element.Location).Point;
@@ -57,7 +59,6 @@ namespace Revit_Ninja
                         if (solid != null && solid.Volume > 0)
                         {
                             solids.Add(solid);
-
                         }
                     }
                 }
@@ -147,6 +148,67 @@ namespace Revit_Ninja
             {
                 return null;
             }
+        }
+
+        public static bool assignParameter(ExternalCommandData commandData, string Group, string ParamName, BuiltInCategory category, ForgeTypeId paramType)
+        {
+            string sharedParametersFile = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+                "Revit-Ninja-sharedParameters.txt");
+            UIDocument uidoc;
+            Document doc;
+            DefinitionGroup defGroup;
+            Definition definition;
+            DefinitionFile defFile;
+            CategorySet categories;
+            string groupName=Group;
+            uidoc = commandData.Application.ActiveUIDocument;
+            doc = uidoc.Document;
+            if (!File.Exists(sharedParametersFile))
+            {
+                File.Create(sharedParametersFile).Dispose();
+            }
+            Autodesk.Revit.ApplicationServices.Application App = commandData.Application.Application;
+            App.SharedParametersFilename = sharedParametersFile;
+            defFile = App.OpenSharedParameterFile();
+            if (defFile == null) return false;
+            if (defFile.Groups.Where(x => x.Name.ToLower() == Group.ToLower()).Any())
+            {
+                defGroup = defFile.Groups.Where(x => x.Name.ToLower() == Group.ToLower()).FirstOrDefault();
+            }
+            else defGroup = defFile.Groups.Create(groupName);
+            if (defGroup.Definitions.Where(x => x.Name == ParamName).Any())
+            {
+                if (defGroup.Definitions.Where(x => x.Name == ParamName)
+                    .First().GetDataType() != paramType)
+                {
+                    return false;
+                }
+                definition = defGroup.Definitions.Where(x => x.Name == ParamName).First();
+            }
+            else
+            {
+                ExternalDefinitionCreationOptions options = new ExternalDefinitionCreationOptions(ParamName, paramType);
+                definition = defGroup.Definitions.Create(options);
+            }
+
+            // Add shared parameter to categories
+            categories = App.Create.NewCategorySet();
+            categories.Insert(doc.Settings.Categories.get_Item(category));
+
+            using (Transaction t = new Transaction(doc, "Add Shared Parameter"))
+            {
+                t.Start();
+
+                // Bind the shared parameter to the categories
+                InstanceBinding binding = App.Create.NewInstanceBinding(categories);
+                BindingMap bindingMap = doc.ParameterBindings;
+                bool bindingResult = bindingMap.Insert(definition, binding, BuiltInParameterGroup.PG_TEXT);
+                if (!bindingResult) return false;
+
+                t.Commit();
+            }
+            return true;
         }
 
         public static ImageSource ToImageSource(this Icon icon)

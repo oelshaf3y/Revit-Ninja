@@ -98,6 +98,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alignment\AlignElement.cs" />
+    <Compile Include="Alignment\AlignHorizontally.cs" />
+    <Compile Include="Alignment\AlignText.cs" />
+    <Compile Include="Alignment\AlignVertically.cs" />
     <Compile Include="Ninja.cs" />
     <Compile Include="ParamFromExcel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,6 +120,8 @@
     <Compile Include="Reinforcement\HideUnHosted.cs" />
     <Compile Include="Reinforcement\RebarByHost.cs" />
     <Compile Include="Reinforcement\ToggleRebar.cs" />
+    <Compile Include="Views\AlignView.cs" />
+    <Compile Include="Views\SaveViewState.cs" />
     <Compile Include="SelectBy\SelectBy.cs" />
     <Compile Include="SelectBy\SelectByForm.cs">
       <SubType>Form</SubType>
@@ -126,7 +132,6 @@
     <Compile Include="Views\NotOnSheets.cs" />
     <Compile Include="Views\ResetSheet.cs" />
     <Compile Include="Views\ResetViewState.cs" />
-    <Compile Include="Views\SaveViewState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
