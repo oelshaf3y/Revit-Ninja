@@ -102,6 +102,7 @@
     <Compile Include="Alignment\AlignHorizontally.cs" />
     <Compile Include="Alignment\AlignText.cs" />
     <Compile Include="Alignment\AlignVertically.cs" />
+    <Compile Include="Alignment\TagAllignment.cs" />
     <Compile Include="Ninja.cs" />
     <Compile Include="ParamFromExcel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
